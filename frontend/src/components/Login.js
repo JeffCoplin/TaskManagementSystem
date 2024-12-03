@@ -31,29 +31,32 @@ function Login({ onLogin }) {
 
   return (
     <div>
-      <h1>Iniciar sesión</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Email:</label>
-          <input 
-            type="email" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
-            required 
-          />
-        </div>
-        <div>
-          <label>Contraseña:</label>
-          <input 
-            type="password" 
-            value={password} 
-            onChange={(e) => setPassword(e.target.value)} 
-            required 
-          />
-        </div>
-        <button type="submit">Iniciar sesión</button>
-      </form>
+  <h1>Iniciar sesión</h1>
+  <form id="login-form" onSubmit={handleSubmit}>
+    <div>
+      <label>Email:</label>
+      <input
+        id="login-email" // Identificador único
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
     </div>
+    <div>
+      <label>Contraseña:</label>
+      <input
+        id="login-password" // Identificador único
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        required
+      />
+    </div>
+    <button id="login-submit" type="submit">Iniciar sesión</button>
+  </form>
+</div>
+
   );
 }
 
